@@ -1,0 +1,49 @@
+<div>
+    <div>
+        <table>
+            <tr>
+                <th>Width</th>
+                <th>Length</th>
+                <th>Height</th>
+                <th>Area</th>
+                <th>Perimeter</th>
+                <th>Surface Area</th>
+                <th>Volume</th>
+                <th>Classification</th>
+            </tr>
+            <tr *ngFor="let room of Rooms">
+                <td>{{room.width}}</td>
+                <td>{{room.length}}</td>
+                <td>{{room.height}}</td>
+                <td>{{room.size}}</td>
+                <td>{{room.perimeter}}</td>
+                <td>{{room.surfaceArea}}</td>
+                <td>{{room.volume}}</td>
+                <td>{{roomclassification(room.size)}}</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>Average Width</th>
+                <th>Average Length</th>
+                <th>Average Height</th>
+                <th>Average Size</th>
+                <th>Average Perimeter</th>
+                <th>Average Surface Area</th>
+                <th>Average Volume</th>
+            </tr>
+            <tr>
+                <td>{{AverageRoomWidth()}}</td>
+                <td>{{AverageRoomLength()}}</td>
+                <td>{{AverageRoomHeight()}}</td>
+                <td>{{AverageRoomSize()}}</td>
+                <td>{{AverageRoomPerimeter()}}</td>
+                <td>{{AverageRoomSurfaceArea()}}</td>
+                <td>{{AverageRoomVolume()}}</td>
+            </tr>
+        </table>
+        <button routerLink="/addroom">Add Room</button>
+    </div>
+</div>

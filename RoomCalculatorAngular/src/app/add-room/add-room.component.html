@@ -1,0 +1,17 @@
+<form class="add-new-form">
+    <h2 class="add-order-heading">Add Room:</h2>
+    <p class="col-6">
+      Width:
+      <input type="number" class="form-control" name="width" id="width" [(ngModel)]="width"/>
+    </p>
+    <p class="col-6">
+        Lenght:
+        <input type="number" class="form-control" name="length" id="length" [(ngModel)]="length"/>
+      </p><p class="col-6">
+        Height:
+        <input type="number" class="form-control" name="height" id="height" [(ngModel)]="height"/>
+      </p>
+    <button class="btn btn-primary" (click)="submit()" type="submit">add room</button>
+  </form>
+
+  <button routerLink="/roomhistory">Room History</button>
